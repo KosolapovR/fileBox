@@ -19,11 +19,42 @@ body {
   padding: 40px;
 }
 
-.main-block {
+.main {
   height: 100%;
   flex: 8 0 auto;
   padding-left: 250px;
   background: $backgroundPrimary;
   @include box-shadow(2px, -1px, 30px, rgba(100, 100, 100, 0.6));
   border-radius: 20px;
+}
+.main-enter {
+  opacity: 0.01;
+  transform: translateY(10px);
+}
+
+.main-enter.main-enter-active {
+  opacity: 1;
+  transform: translateY(0px);
+  transition: opacity 300ms ease-in, transform 300ms ease-in;
+}
+
+.main-exit {
+  opacity: 1;
+}
+
+.main-exit.main-exit-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}
+
+.transition-group {
+  position: relative;
+  height: 100%;
+}
+.route-section {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
 }
