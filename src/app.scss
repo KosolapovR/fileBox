@@ -1,0 +1,29 @@
+@import "foundation/_mixins";
+@import "src/foundation/_variables";
+
+body {
+  height: 100vh;
+  box-sizing: border-box;
+  margin: 0;
+  background: rgb(212, 225, 227);
+  background: linear-gradient(
+    90deg,
+    rgba(212, 225, 227, 1) 0%,
+    rgba(193, 214, 218, 1) 35%,
+    rgba(152, 189, 196, 1) 100%
+  );
+}
+
+.template {
+  height: 100vh;
+  padding: 40px;
+}
+
+.main-block {
+  height: 100%;
+  flex: 8 0 auto;
+  padding-left: 250px;
+  background: $backgroundPrimary;
+  @include box-shadow(2px, -1px, 30px, rgba(100, 100, 100, 0.6));
+  border-radius: 20px;
+}

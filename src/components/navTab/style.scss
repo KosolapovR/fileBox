@@ -1,0 +1,11 @@
+@import "../../foundation/_mixins";
+
+.navbar {
+  position: absolute;
+  top: 20px;
+  width: 250px;
+  height: calc(100% - 40px);
+  background: #f3f6f6;
+  @include box-shadow(2px, -1px, 50px, rgba(100, 100, 100, 0.4));
+  border-radius: 20px;
+}
